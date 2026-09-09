@@ -1,0 +1,6 @@
+{
+  "name": "우리 반 추첨 & 타이머 도우미",
+  "description": "룰렛 추첨, 스피드 릴레이, 사진 랜덤 뽑기, 뽀모도로 타이머와 스톱워치 올인원 학급 도구",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
