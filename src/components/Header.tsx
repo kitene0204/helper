@@ -46,6 +46,8 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'roulette', label: '두근두근 룰렛', icon: '🎡' },
     { id: 'relay', label: '스피드 릴레이', icon: '🏃' },
     { id: 'photo', label: '사진 랜덤 뽑기', icon: '📸' },
+    { id: 'ladder', label: '신나는 사다리타기', icon: '🪜' },
+    { id: 'group', label: '모둠 & 자리 배치', icon: '👥' },
     { id: 'timer', label: '뽀모도로 타이머', icon: '🍅' },
     { id: 'stopwatch', label: '스피드 스톱워치', icon: '⏱️' },
   ];

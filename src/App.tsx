@@ -4,6 +4,8 @@ import { Header } from './components/Header';
 import { RouletteView } from './components/RouletteView';
 import { RelayView } from './components/RelayView';
 import { PhotoPickerView } from './components/PhotoPickerView';
+import { LadderView } from './components/LadderView';
+import { GroupAndSeatingView } from './components/GroupAndSeatingView';
 import { TimerView } from './components/TimerView';
 import { StopwatchView } from './components/StopwatchView';
 import { SettingsModal } from './components/SettingsModal';
@@ -250,6 +252,10 @@ export default function App() {
               onClearAllPhotos={handleClearAllPhotos}
             />
           )}
+
+          {currentTab === 'ladder' && <LadderView students={masterStudents} />}
+
+          {currentTab === 'group' && <GroupAndSeatingView students={masterStudents} />}
 
           {currentTab === 'timer' && <TimerView />}
 

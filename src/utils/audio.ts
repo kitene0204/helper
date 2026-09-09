@@ -166,6 +166,28 @@ class SoundManager {
       // ignore
     }
   }
+
+  // 사다리 이동 발걸음 소리
+  playLadderStep(freq = 600) {
+    if (!this.enabled) return;
+    try {
+      const ctx = this.getContext();
+      if (!ctx) return;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(freq * 1.2, ctx.currentTime + 0.04);
+      gain.gain.setValueAtTime(0.12, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.04);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.04);
+    } catch {
+      // ignore
+    }
+  }
 }
 
 export const soundManager = new SoundManager();
